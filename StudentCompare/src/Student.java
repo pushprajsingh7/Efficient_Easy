@@ -1,0 +1,42 @@
+import java.util.*;
+
+class Student implements Comparable<Student> {
+	int id;
+	String name;
+	String collegeName;
+	String address;
+
+	public Student(int id, String name, String collegeName, String address) {
+		this.id = id;
+		this.name = name;
+		this.collegeName = collegeName;
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "name : " + name + "\n" + " id : " + id + "\n" + "college Name :" + collegeName + "\naddress : "
+				+ address + "\n";
+	}
+
+	public  String getName() {
+		return name;
+	}
+
+	public int getid() {
+		return id;
+	}
+
+	public String getcollege() {
+		return collegeName;
+	}
+
+	public String getaddress() {
+		return address;
+	}
+
+	public int compareTo(Student stobject) {
+		return name.compareTo(stobject.name);
+	}
+
+}
